@@ -1,0 +1,241 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    background-image: url(bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    line-height: 1.6;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    height: 100%;
+    overflow-y: auto; /* Allow scrolling */
+}
+
+/* Navbar Styling */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px 20px;
+    z-index: 10;
+}
+
+.navbar .logo {
+    color: orange;
+    font-size: 35px;
+    font-family: Arial, sans-serif;
+}
+
+/* Container Styling */
+.container {
+    max-width: 1000px;
+    width: 100%;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    padding-top: 30px;
+    margin-top: 80px; /* Added margin to avoid overlap with navbar */
+    margin-bottom: 20px;
+    height: auto;
+    overflow-y: auto;
+}
+
+/* Heading Styling */
+h1 {
+    font-family: 'Times New Roman', serif;
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding: 20px;
+    text-align: center;
+    background: linear-gradient(to right, #FF6600, #FF4500); /* Light Orange to Deep Orange */
+    color: #FFFFFF; /* White */
+    border-radius: 10px;
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 1.4;
+    transition: all 0.3s ease;
+}
+
+h1:hover {
+    background-color: #FF8C00; /* Brighter Orange */
+    transform: translateY(-5px);
+    box-shadow: 4px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Content Image Styling */
+.content img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    margin: 20px 0;
+}
+
+/* Paragraph Styling */
+p {
+    font-family: 'Times New Roman', serif;
+    font-size: 1.2rem;
+    font-weight: normal;
+    background: linear-gradient(to right, #A2C2E0, #2A4D80); /* Light Blue to Deep Blue */
+    color: #FFFFFF; /* White */
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+p:hover {
+    background-color: #E65C00;
+    transform: translateY(-5px);
+    box-shadow: 4px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Button Styling */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #FF6600;
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: #E65C00;
+    transform: translateY(-5px);
+    box-shadow: 4px 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Menu Styles */
+.menu {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 25;
+    background-color: rgba(51, 51, 51, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+ul li {
+    margin: 0 20px;
+    font-size: 16px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #f4f4f4;
+    font-size: 16px;
+}
+
+ul li a:hover {
+    color: #ff6347; /* Tomato color */
+}
+
+/* Media Query for Mobile and Tablet */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .container {
+        width: 95%;
+    }
+
+    .content img {
+        max-width: 100%;
+    }
+
+    .btn {
+        font-size: 1rem;
+    }
+
+    .menu {
+        bottom: 10px;
+        padding: 5px 15px;
+    }
+
+    .menu ul li {
+        margin: 0 5px;
+    }
+
+    .menu ul li a {
+        font-size: 1rem;
+    }
+}
+
+/* Additional Breakpoint for Small Mobile Devices (max-width: 480px) */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    .container {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .content img {
+        max-width: 100%;
+    }
+
+    .btn {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+
+    .menu {
+        bottom: 10px;
+        padding: 5px 10px;
+    }
+
+    .menu ul li {
+        margin: 0 3px;
+    }
+
+    .menu ul li a {
+        font-size: 0.9rem;
+    }
+}

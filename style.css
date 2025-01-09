@@ -1,0 +1,271 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    overflow: hidden;
+    touch-action: none;
+    height: 100%;
+    margin: 0;
+}
+
+.main {
+    width: 100%;
+    background: 
+        linear-gradient(to top, rgba(0, 0, 0, 0.5)50%, rgba(0, 0, 0, 0.5)50%),
+        url('bg.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #f4f4f4;
+    text-align: center;
+    z-index: 10;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.content h1 {
+    font-family: 'Times New Roman', serif;
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.content span {
+    color: #ff6347;
+    font-size: 60px;
+}
+
+.content .par {
+    font-family: Arial;
+    letter-spacing: 1.2px;
+    line-height: 30px;
+    margin: 20px 0;
+}
+
+.content .cn {
+    width: 160px;
+    height: 40px;
+    background: #ff6347;
+    border: none;
+    margin-bottom: 10px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+
+.content .cn a {
+    text-decoration: none;
+    color: #000;
+}
+
+.cn:hover {
+    background-color: #f4f4f4;
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 75px;
+    background-color: rgba(51, 51, 51, 0.8);
+    padding: 0 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 20;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 25px;
+}
+
+.logo {
+    color: orange;
+    font-size: 35px;
+    font-family: Arial, sans-serif;
+}
+
+.menu {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 25;
+    background-color: rgba(51, 51, 51, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+ul li {
+    margin: 0 20px;
+    font-size: 16px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #f4f4f4;
+    font-size: 16px;
+}
+
+ul li a:hover {
+    color: #ff6347;
+}
+
+.content-section,
+.another-content-section {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    font-weight: bold;
+    transition: 0.4s ease-in-out;
+}
+
+p {
+    font-family: 'Times New Roman';
+    color: #fff;
+}
+
+/* Media Queries for responsiveness */
+
+/* For devices smaller than 1024px (tablets) */
+@media (max-width: 1024px) {
+    .content h1 {
+        font-size: 40px;
+    }
+
+    .content span {
+        font-size: 50px;
+    }
+
+    .content .par {
+        font-size: 16px;
+    }
+
+    .content .cn {
+        width: 140px;
+        height: 35px;
+        font-size: 16px;
+    }
+
+    .navbar {
+        height: 60px;
+    }
+
+    .navbar .logo {
+        font-size: 30px;
+    }
+
+    ul li {
+        font-size: 14px;
+    }
+}
+
+/* For devices smaller than 768px (small tablets, large phones) */
+@media (max-width: 768px) {
+    .content h1 {
+        font-size: 30px;
+    }
+
+    .content span {
+        font-size: 40px;
+    }
+
+    .content .par {
+        font-size: 14px;
+        line-height: 26px;
+    }
+
+    .content .cn {
+        width: 120px;
+        height: 30px;
+        font-size: 14px;
+    }
+
+    .navbar {
+        height: 50px;
+        padding: 0 10px;
+    }
+
+    .navbar .logo {
+        font-size: 25px;
+    }
+
+    .menu {
+        top: 10px;
+        right: 10px;
+    }
+
+    ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    ul li {
+        margin: 10px 0;
+        font-size: 14px;
+    }
+}
+
+/* For devices smaller than 480px (mobile phones) */
+@media (max-width: 480px) {
+    .content h1 {
+        font-size: 24px;
+    }
+
+    .content span {
+        font-size: 32px;
+    }
+
+    .content .par {
+        font-size: 12px;
+        line-height: 22px;
+    }
+
+    .content .cn {
+        width: 100px;
+        height: 25px;
+        font-size: 12px;
+    }
+
+    .navbar {
+        height: 45px;
+        padding: 0 8px;
+    }
+
+    .navbar .logo {
+        font-size: 20px;
+    }
+
+    .menu {
+        top: 5px;
+        right: 5px;
+        padding: 8px;
+    }
+
+    ul li {
+        margin: 8px 0;
+        font-size: 12px;
+    }
+}
